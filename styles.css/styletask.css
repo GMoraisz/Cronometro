@@ -1,0 +1,141 @@
+/* Importação de fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+/* Definição de variáveis de estilo */
+:root {
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+    --cor-primaria: #2b4c7e;
+    --cor-secundaria: #1f1f20;
+    --cor-terciaria: #567ebb;
+    --cor-quaternaria: #dce0e6;
+    --cor-quintenaria: #ffffff;
+}
+
+/* Estilo geral do corpo da página */
+/* Estilo geral do corpo da página */
+body {
+    background-color: var(--cor-quartenaria);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+/* Container principal da página */
+.page-container {
+    display: flex;
+    flex-direction: column; /* Alteração para layout de coluna */
+    align-items: center; /* Centraliza o conteúdo na coluna */
+}
+
+/* Estilo da lista de tarefas */
+.TaskList {
+    background-color: var(--cor-terciaria);
+    padding: 1.25rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1), 0 0 0 0.125rem var(--cor-secundaria);
+    text-align: left;
+    margin-top: 1rem; /* Adaptação da margem superior */
+    max-width: 400px; /* Adaptação da largura máxima */
+    width: 100%; /* Utilização de 100% da largura disponível */
+}
+
+/* Estilo do título da lista de tarefas */
+.TaskList h2 {
+    font-family: var(--fonte-primaria);
+    color: var(--cor-secundaria);
+    text-shadow: 1px 1px 1px var(--cor-quintenaria);
+    text-align: center;
+}
+
+/* Estilo da tabela de tarefas */
+#taskTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+#taskTable th,
+#taskTable td {
+    font-family: var(--fonte-secundaria);
+    border: 0.0625rem solid var(--cor-secundaria);
+    padding: 0.625rem;
+    text-align: center;
+}
+
+
+/* Estilo do campo de nome da tarefa */
+#nomeTarefa {
+    padding: 0.3rem; /* Reduz o padding */
+    margin-top: 0.625rem;
+    width: 100%;
+    font-size: 0.9rem; /* Ajusta o tamanho da fonte */
+}
+
+.TaskList button{
+    
+    margin-top: 0.6rem;
+    margin-left: 0.4rem;
+    width: 25%;
+    height: 5.7vh;
+    font-family: var(--fonte-primaria);
+    font-size: 0.65rem;
+    color: var(--cor-quintenaria);
+    text-shadow: 1.5px 1.5px 1.5px black;
+    border-radius: 1.2rem;
+    border: 2px solid var(--cor-terciaria);
+    cursor: pointer;
+    background-color: var(--cor-primaria);
+}
+.textfield {
+
+    
+    border-radius: 0.75rem;
+}
+
+
+/* Efeito de hover nos botões da lista de tarefas */
+ button:hover {
+    background-color: var(--cor-secundaria);
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: var(--cor-secundaria);  /* Cor do texto no rodapé */
+    font-family: var(--fonte-secundaria);  /* Fonte no rodapé */
+    margin-top: 2rem;  /* Espaçamento superior para o rodapé */
+}
+
+/* Ajuste para dispositivos móveis */
+@media screen and (max-width: 600px) {
+    .TaskList {
+        padding: 1rem; /* Reduz o padding para melhorar o espaçamento em telas menores */
+        margin-top: 0.5rem; /* Ajuste de margem superior para telas menores */
+    }
+
+    #taskTable td,
+    #taskTable th {
+        padding: 0.5rem; /* Reduz o padding nas células da tabela */
+    }
+
+    #nomeTarefa {
+        padding: 0.2rem; /* Reduz o padding do campo de nome da tarefa */
+        font-size: 0.8rem; /* Reduz o tamanho da fonte para telas menores */
+    }
+
+    button {
+        margin-top: 0.5rem;
+        padding: 0.5rem; /* Reduz o padding dos botões */
+        margin-right: 0.2rem; /* Reduz a margem à direita dos botões */
+    }
+
+     button:hover {
+        background-color: var(--cor-secundaria);
+    }
+}

@@ -30,7 +30,6 @@ body {
 #taskTable {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
     border: 2px solid #fff; 
 }
 
@@ -96,7 +95,7 @@ body {
 
 footer {
     text-align: center;
-    background-color: #0000FF;
+    background-color: #ff0000;
     padding: 10px;
     bottom: 0;
     width: 100%;

@@ -5,83 +5,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cronômetro Inteligente</title>
-    <link rel="stylesheet" href="styles.css/stylecrono.css">
     <link rel="stylesheet" href="styles.css/styletask.css">
 </head>
 
 <body>
 
-    <header class="TaskList">
-        <h2>Lista de Tarefas</h2>   
+    <div class="container">
 
-        <!-- Tabela para exibir as tarefas e seus tempos decorridos -->
-        <table id="taskTable">
-            <tr>
-                
-                <th>Tarefa</th>
-                <th>Tempo Decorrido</th>
-            </tr>
-        </table>
-
-        <!-- Input para adicionar uma nova tarefa -->
-        <input class="textfield" type="text" id="nomeTarefa" placeholder="Nome da Tarefa">
-        
-      
-        <!-- Botões para adicionar uma nova tarefa, limpar uma linha, limpar todas as tarefas e excluir tarefas selecionadas -->
-        <button onclick="adicionarTarefa()">Adicionar</button>
-        <button onclick="clearLine()">Limpar</button>
-        <button  onclick="clearTable()"> Limpar Tudo</button>
-    
-    </header> <Br> 
-
-
-    
-    <!-- Contêiner principal da página -->
-    <div class="page-container">
-        <!-- Título da página -->
-        <h1 class="index-title">Cronômetro</h1>
-
-        <!-- Seção contendo o cronômetro, áudio e vídeo -->
-        <section>
-            <audio id="ticktock" src="assets/tictac.mp3"></audio>
-
-            <!-- Vídeo de um relógio em loop -->
-            <video class="cronogif" id="cronogif" width="430" height="280" loop>
-                <source src="assets/contador.mp4" type="video/mp4">
-                Seu navegador não suporta o vídeo.
-            </video>
-
-            <!-- Contêiner do cronômetro -->
-            <div class="Cronometro-container">
-                <form class="Cronometro">
-
-                    <!-- Display do contador de horas, minutos, segundos e milissegundos -->
-                    <div class="contador">
-                        <span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span>:<span
-                            id="millisecond">000</span>
-                    </div>
-
-                    <br />
-
-                    <!-- Botões para iniciar, pausar e resetar o cronômetro -->
-                    <button type="button" id="startButton" onclick="startTimer()">Start</button>
-                    <button type="button" id="pauseButton" onclick="pauseTimer()">Pause</button>
-                    <button type="button" id="resetButton" onclick="resetTimer()">Reset</button>
-                </form>
+        <div class="task-container">
+            <div class="TaskList">
+                <h2>Lista de Tarefas</h2>
+                <input class="textfield" type="text" id="nomeTarefa" placeholder="Nome da Tarefa">
+                <div class="table-buttons">
+                    <button class="add-button" onclick="adicionarTarefa()">Adicionar</button>
+                    <button class="clear-button" onclick="clearLine()">Limpar</button>
+                    <button class="clear-all-button" onclick="clearTable()">Limpar Tudo</button>
+                </div>
             </div>
-        </section>
-    </div>
-    
-    
-    <script defer src="scripts.js/scriptcrono.js"></script> 
 
-    <!-- Rodapé -->
+            <div class="table-container">
+                <table id="taskTable">
+                    <tr>
+                        <td> Tarefa </td>
+                        <td>Tempo Decorrido</td>
+                       
+                      </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="page-container">
+            <h1 class="index-title">Cronômetro</h1>
+            <section class="crono-section">
+                <audio id="ticktock" src="assets/tictac.mp3"></audio>
+                <div class="Cronometro-container">
+                    <video class="cronogif" id="cronogif" width="430" height="280" loop>
+                        <source src="assets/contador.mp4" type="video/mp4">
+                        Seu navegador não suporta o vídeo.
+                    </video>
+                    <form class="Cronometro">
+                        <div class="contador">
+                            <span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span>:<span
+                                id="millisecond">000</span>
+                        </div>
+                        <div class="cronobuttons">
+                            <button type="button" id="startButton" onclick="startTimer()">Start</button>
+                            <button type="button" id="pauseButton" onclick="pauseTimer()">Pause</button>
+                            <button type="button" id="resetButton" onclick="resetTimer()">Reset</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+
+    </div>
+
     <footer>
-        <p>Todos os direitos reservados @2023 | GMorais</p>
+        <h3>Todos os direitos reservados @2023 | GMorais</h3>
     </footer>
 
 </body>
 
+<script defer src="scripts.js/scriptcrono.js">
+</script>
+
 </html>
-
-

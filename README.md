@@ -12,4 +12,5 @@ Cronômetro unificado com uma toDoList, fiz esse projeto para praticar meus estu
 
 ## 🖼️ Tela Inicial :
 
-## ![image](https://github.com/GMoraisz/Cronometro/assets/136760261/4f338d55-ca2e-4136-9eae-37ae4aa58a00)
+## ![image](https://github.com/GMoraisz/Cronometro/assets/136760261/81ca08e4-eaa4-4eb1-b242-84d96eec68c0)
+
